@@ -23,4 +23,9 @@ fn main() {
     let ip_v4 = IpAddrType::V4Num(127,0,0,1);
     let ip_v4_string = IpAddrType::V4STRING(String::from("127.0.0.1"));
     let ip_v6 = IpAddrType::V6STRING(String::from(""));
+
+    //option<T> is an important design in Rust to avoid none errors
+    //learn more later
+    let a = Some(5);
+    let absent: Option<u32> = None;
 }
