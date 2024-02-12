@@ -1,17 +1,17 @@
-enum IpAddrType{
+enum IpAddrType {
     V4Num(u8, u8, u8, u8),
     V4STRING(String),
     V6STRING(String),
 }
 
-enum Coin{
+enum Coin {
     Penny,
     Nickel,
     Dime,
     Quarter,
 }
 
-fn value_in_cents(coin: Coin) -> u8{
+fn value_in_cents(coin: Coin) -> u8 {
     match coin {
         Coin::Penny => 1,
         Coin::Nickel => 5,
@@ -20,7 +20,7 @@ fn value_in_cents(coin: Coin) -> u8{
     }
 }
 fn main() {
-    let ip_v4 = IpAddrType::V4Num(127,0,0,1);
+    let ip_v4 = IpAddrType::V4Num(127, 0, 0, 1);
     let ip_v4_string = IpAddrType::V4STRING(String::from("127.0.0.1"));
     let ip_v6 = IpAddrType::V6STRING(String::from(""));
 
